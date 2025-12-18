@@ -50,6 +50,8 @@ from huggingface_hub import hf_hub_download, snapshot_download
 from shared.utils import files_locator as fl 
 from shared.gradio.audio_gallery import AudioGallery  
 import torch
+import torch._dynamo
+torch._dynamo.config.suppress_errors = True
 import gc
 import traceback
 import math 
